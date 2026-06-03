@@ -506,6 +506,7 @@ body.dark .text0 {
   color: white;
 }
 
+
 /* Dark mode text fixes */
 body.dark #div1 p {
   color: #e0e0e0 !important;
@@ -555,8 +556,7 @@ body.dark .options a {
 }
 
 body.dark .dropdown-toggle:hover {
-  background-color: #010306;
+  background-color: #0f3460;
 }
-
 
   
