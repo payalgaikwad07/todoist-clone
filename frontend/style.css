@@ -651,3 +651,19 @@ body.dark #dueDateInput {
   min-height: 20px;
 }
   
+.logout-btn {
+  margin-left: 15px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid rgb(223, 59, 59);
+  color: rgb(223, 59, 59);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: rgb(223, 59, 59);
+  color: white;
+}
