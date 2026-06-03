@@ -584,4 +584,70 @@ body.dark #dueDateInput {
   margin-top: 4px;
 }
 
+
+#auth-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+#auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 400px;
+  text-align: center;
+}
+
+#auth-box h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#auth-box p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#auth-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(223, 59, 59);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+#auth-box button:hover {
+  background-color: rgb(175, 33, 33);
+}
+
+#auth-box a {
+  color: rgb(223, 59, 59);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#error-msg {
+  margin-bottom: 10px;
+  font-size: 14px;
+  min-height: 20px;
+}
   
