@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todoist Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo1">
+        <a href="http://127.0.0.1:5500/website3/">
+          <img src="img1.png" alt="Logo"/>
+        </a>
+      </div>
+      <div id="info">
+        <div class="menu-item">
+          <div class="dropdown-toggle">
+            <span class="text0">Made For</span>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="options" id="dropdownMenu">
+            <a href="https://example.com/Task Management"><i class="ri-checkbox-circle-line"></i>Task Management</a>
+            <a href="https://example.com/Project Management"><i class="ri-file-list-line"></i>Project Management</a>
+            <a href="https://example.com/Time management"><i class="ri-alarm-line"></i>Time management</a>
+            <a href="https://example.com/Team Work"><i class="ri-group-line"></i>Team Work</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="dropdown-toggle">
+            <span class="text0">Resources</span>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="options" id=""dropdownMenu>
+            <a href="https://example.com/Integrations"><i class="ri-plug-2-line"></i></i>Integrations</a>
+            <a href="https://example.com/Templates"><i class="ri-file-2-line"></i>Templates</a>
+            <a href="https://example.com/Getting started"><i class="ri-flashlight-line"></i>Getting started</a>
+            <a href="https://example.com/Help centre"><i class="ri-questionnaire-fill"></i>Help centre</a>
+            <a href="https://example.com/Productivity methods +Quiz"><i class="ri-question-mark"></i>Productivity methods +Quiz</a>
+            <a href="https://example.com/nspiration Hubs"><i class="ri-lightbulb-line"></i>nspiration Hubs</a>
+            <a href="https://example.com/Downloads"><i class="ri-download-2-line"></i>Downloads</a>
+          </div>
+        </div>
+        <div class="about" ><a href="Pricing">Pricing</a></div>
+      </div>
+      <span>   |     </span>
+      <div class="about"><a href="login">Log in</a></div>
+      <div class="start"><a href="try for free">Try For Free</a></div>
+    </div>
+    <div id="Fakeheader"></div>
+    <div id="page1">
+      <div id="div1" class="first"> 
+        <br><br><br>
+      <p style="font-size: 50px;font-weight: bold;">Clarity, finally.</p><br>
+      <p style="font-size: 20px;font-weight: normal;color: rgb(82, 76, 76);">Join 50+ million professionals who simplify <br>work and life with the world’s #1 to-do list app.</p><br>
+      <img src="img2.png" alt=""><br>
+      <button id="button" class="start"><a href="link5">Start for free</a></button><br>
+      <p style="font-size: 15px;font-weight: normal;color:rgb(82, 76, 76); ;">Calm the chaos in a matter of minutes!</p>
+      </div>
+      <div id="div2" class="first">
+        <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_1536/https%3A%2F%2Fwww.todoist.com%2Fstatic%2Fhome-teams%2Fintro%2Fwide%2Fheaderui.en.png" alt="">
+      </div>
+    </div>
+    <div id="page2">
+      <div id="div3" class="second">
+        <p class="text">“Simple, straightforward,
+          and super powerful”</p><br><br><br>
+        <img src="https://res.cloudinary.com/imagist/image/upload/h_114,e_colorize,o_48,co_rgb:17150f7a/v1715868560/the-verge_gdh1dw.png" alt="">
+      </div>
+      <div class="divider"></div>
+      <div id="div4" class="second">
+        <p class="text"><br>"The best to-do list app
+          on the market”</p><br><br><br>
+          <img src="https://res.cloudinary.com/imagist/image/upload/h_114,e_colorize,o_48,co_rgb:17150f7a/v1715868560/pc-mag_ak9mna.png" alt="">
+      </div>
+      <div class="divider"></div>
+      <div id="div5" class="second">
+        <p class="text">“Nothing short of stellar”</p><br><br><br>
+        <img src="https://res.cloudinary.com/imagist/image/upload/h_114,e_colorize,o_48,co_rgb:17150f7a/v1715868560/techradar_qt0nt6.png" alt="">
+      </div>
+    </div>
+    <div id="page3">
+      <div id="div6" class="third">
+        <p id="text1">Clear your mind</p>
+        <p id="text2">Capture tasks at the speed of thought</p> <br><br>
+        <p id="text3">We’ve spent over a decade refining Todoist to be an extension of your mind. Capture and organize tasks instantly using easy-flowing, natural language.</p>
+      </div>
+      <div id="div7" class="third">
+        <div class="video-container" onmouseover="showControls()" onmouseout="hideControls()">
+          <video id="myVideo" width="600" height="auto" autoplay muted>
+            <source src="video4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="controls-overlay" id="controls">
+            <button id="playBtn" onclick="playVideo()" style="font-size: 30px;">Play</button>
+            <button id="pauseBtn" onclick="pauseVideo()" style="font-size: 30px;">Pause</button>
+            <button id="replayBtn" onclick="replayVideo()" style="font-size: 30px;">Replay</button>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div id="page4">
+      <div class="task-section">
+        <h2 class="task-title">Manage Your Tasks Effortlessly</h2>
+        <div class="task-board">
+          <div class="task-card">
+            <h3>📝 Meeting with Team</h3>
+            <p>Discuss project roadmap and assign next tasks.</p>
+            <span class="tag in-progress">In Progress</span>
+          </div>
+          <div class="task-card">
+            <h3>✅ Buy Groceries</h3>
+            <p>Milk, Bread, Eggs, and Coffee</p>
+            <span class="tag done">Done</span>
+          </div>
+          <div class="task-card">
+            <h3>📌 Write Blog Post</h3>
+            <p>Topic: Productivity Tips for 2025</p>
+            <span class="tag pending">Pending</span>
+          </div>
+        </div>
+      </div>
+      <div id="page5">
+        <div class="demo-box">
+          <h2>Try Adding a Task</h2>
+          <input type="text" id="liveTaskInput" placeholder="Type your task here..." />
+          <button id="liveAddTaskBtn">Add Task</button>
+          <div id="liveTaskList"></div>
+        </div>
+      </div> 
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; padding: 40px;">
+      <h3 style="font-size: 36px; text-align: center;font-size:30px;">Login for more features 😊</h3>
+    </div> 
+</body>
+</html>
