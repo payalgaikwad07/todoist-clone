@@ -506,5 +506,57 @@ body.dark .text0 {
   color: white;
 }
 
+/* Dark mode text fixes */
+body.dark #div1 p {
+  color: #e0e0e0 !important;
+}
+
+body.dark .task-title {
+  color: #e0e0e0;
+}
+
+body.dark .task-card h3 {
+  color: white;
+}
+
+body.dark .task-card p {
+  color: #b0b0b0;
+}
+
+body.dark .demo-box h2 {
+  color: #e0e0e0;
+}
+
+body.dark #liveTaskInput {
+  background-color: #0f3460;
+  color: white;
+  border-color: #444;
+}
+
+body.dark .live-task-item {
+  background-color: #0f3460;
+  color: white;
+}
+
+body.dark #text2 {
+  color: white;
+}
+
+body.dark #text3 {
+  color: #b0b0b0;
+}
+
+body.dark .options {
+  background-color: #16213e;
+}
+
+body.dark .options a {
+  color: #e0e0e0;
+}
+
+body.dark .dropdown-toggle:hover {
+  background-color: #0f3460;
+}
+
 
   
