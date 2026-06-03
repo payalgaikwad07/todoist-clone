@@ -397,6 +397,66 @@
   }
   
 
+  @media (max-width: 768px) {
+  #header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+
+  #info {
+    margin-left: 0;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+
+  #page1 {
+    flex-direction: column;
+    height: auto;
+    padding-top: 100px;
+  }
+
+  #div1, #div2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  #div2 img {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  #page2 {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .divider {
+    height: 1px;
+    width: 80%;
+  }
+
+  #page3 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .third {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  #myVideo {
+    width: 100%;
+  }
+
+  .task-board {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 
   
