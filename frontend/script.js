@@ -72,24 +72,66 @@ const liveInput = document.getElementById('liveTaskInput');
 const liveAddBtn = document.getElementById('liveAddTaskBtn');
 const liveList = document.getElementById('liveTaskList');
 
+// Load saved tasks on page load
+function loadTasks() {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  liveList.innerHTML = '';
+  tasks.forEach((task, index) => renderTask(task, index));
+}
+
+// Render one task item
+function renderTask(task, index) {
+  const taskItem = document.createElement('div');
+  taskItem.className = 'live-task-item';
+  taskItem.style.display = 'flex';
+  taskItem.style.justifyContent = 'space-between';
+  taskItem.style.alignItems = 'center';
+
+  taskItem.innerHTML = `
+    <span>${task}</span>
+    <button onclick="deleteTask(${index})" style="
+      background: none;
+      border: none;
+      color: red;
+      font-size: 18px;
+      cursor: pointer;
+    ">❌</button>
+  `;
+  liveList.appendChild(taskItem);
+}
+
+// Save task
+function saveTask(taskText) {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  tasks.push(taskText);
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+// Delete task
+function deleteTask(index) {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  tasks.splice(index, 1);
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+  loadTasks();
+}
+
 if (liveInput && liveAddBtn && liveList) {
   liveAddBtn.addEventListener('click', () => {
     const taskText = liveInput.value.trim();
     if (taskText !== '') {
-      const taskItem = document.createElement('div');
-      taskItem.className = 'live-task-item';
-      taskItem.textContent = taskText;
-      liveList.appendChild(taskItem);
+      saveTask(taskText);
+      loadTasks();
       liveInput.value = '';
     }
   });
 
   liveInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      liveAddBtn.click();
-    }
+    if (e.key === 'Enter') liveAddBtn.click();
   });
+
+  loadTasks();
 }
+// dark button
 
 const darkBtn = document.getElementById('darkModeBtn');
 
