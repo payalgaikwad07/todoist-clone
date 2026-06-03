@@ -71,43 +71,43 @@
 const liveInput = document.getElementById('liveTaskInput');
 const liveAddBtn = document.getElementById('liveAddTaskBtn');
 const liveList = document.getElementById('liveTaskList');
+const prioritySelect = document.getElementById('prioritySelect');
+const dueDateInput = document.getElementById('dueDateInput');
 
-// Load saved tasks on page load
 function loadTasks() {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   liveList.innerHTML = '';
   tasks.forEach((task, index) => renderTask(task, index));
 }
 
-// Render one task item
 function renderTask(task, index) {
   const taskItem = document.createElement('div');
-  taskItem.className = 'live-task-item';
+  taskItem.className = `live-task-item priority-${task.priority}`;
   taskItem.style.display = 'flex';
   taskItem.style.justifyContent = 'space-between';
   taskItem.style.alignItems = 'center';
 
   taskItem.innerHTML = `
-    <span>${task}</span>
+    <div>
+      <span>${task.text}</span>
+      <div class="task-meta">
+        ${task.priority.toUpperCase()} priority
+        ${task.dueDate ? '· Due: ' + task.dueDate : ''}
+      </div>
+    </div>
     <button onclick="deleteTask(${index})" style="
-      background: none;
-      border: none;
-      color: red;
-      font-size: 18px;
-      cursor: pointer;
-    ">❌</button>
+      background:none; border:none;
+      color:red; font-size:18px; cursor:pointer;">❌</button>
   `;
   liveList.appendChild(taskItem);
 }
 
-// Save task
-function saveTask(taskText) {
+function saveTask(text, priority, dueDate) {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  tasks.push(taskText);
+  tasks.push({ text, priority, dueDate });
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-// Delete task
 function deleteTask(index) {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   tasks.splice(index, 1);
@@ -118,10 +118,13 @@ function deleteTask(index) {
 if (liveInput && liveAddBtn && liveList) {
   liveAddBtn.addEventListener('click', () => {
     const taskText = liveInput.value.trim();
+    const priority = prioritySelect.value;
+    const dueDate = dueDateInput.value;
     if (taskText !== '') {
-      saveTask(taskText);
+      saveTask(taskText, priority, dueDate);
       loadTasks();
       liveInput.value = '';
+      dueDateInput.value = '';
     }
   });
 

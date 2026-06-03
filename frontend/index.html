@@ -128,7 +128,15 @@
         <div class="demo-box">
           <h2>Try Adding a Task</h2>
           <input type="text" id="liveTaskInput" placeholder="Type your task here..." />
-          <button id="liveAddTaskBtn">Add Task</button>
+            <div style="display:flex; gap:10px; justify-content:center; margin-bottom:15px; flex-wrap:wrap;">
+              <select id="prioritySelect">
+                <option value="low">🟢 Low Priority</option>
+                <option value="medium">🟡 Medium Priority</option>
+                <option value="high">🔴 High Priority</option>
+              </select>
+              <input type="date" id="dueDateInput" />
+            </div>
+<button id="liveAddTaskBtn">Add Task</button>
           <div id="liveTaskList"></div>
         </div>
       </div> 

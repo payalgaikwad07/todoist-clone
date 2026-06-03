@@ -559,4 +559,29 @@ body.dark .dropdown-toggle:hover {
   background-color: #0f3460;
 }
 
+#prioritySelect, #dueDateInput {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+body.dark #prioritySelect,
+body.dark #dueDateInput {
+  background-color: #0f3460;
+  color: white;
+  border-color: #444;
+}
+
+.priority-high { border-left: 5px solid red; }
+.priority-medium { border-left: 5px solid orange; }
+.priority-low { border-left: 5px solid green; }
+
+.task-meta {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+}
+
   
