@@ -91,4 +91,18 @@ if (liveInput && liveAddBtn && liveList) {
   });
 }
 
+const darkBtn = document.getElementById('darkModeBtn');
+
+darkBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  darkBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+  localStorage.setItem('darkMode', document.body.classList.contains('dark'));
+});
+
+// Remember dark mode after page refresh
+if (localStorage.getItem('darkMode') === 'true') {
+  document.body.classList.add('dark');
+  darkBtn.textContent = '☀️';
+}
+
 

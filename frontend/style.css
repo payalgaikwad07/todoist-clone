@@ -457,6 +457,54 @@
   }
 }
 
+#darkModeBtn {
+  margin-left: 15px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+body.dark {
+  background-color: #1a1a2e;
+  color: white;
+}
+
+body.dark #header {
+  background-color: #16213e;
+}
+
+body.dark #page2 {
+  background-color: #16213e;
+}
+
+body.dark #page3 {
+  background-color: #1a1a2e;
+}
+
+body.dark #page4 {
+  background-color: #1a1a2e;
+}
+
+body.dark .task-card {
+  background-color: #16213e;
+  color: white;
+}
+
+body.dark .demo-box {
+  background-color: #16213e;
+  color: white;
+}
+
+body.dark .about a {
+  color: white;
+}
+
+body.dark .text0 {
+  color: white;
+}
 
 
   
